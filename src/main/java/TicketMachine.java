@@ -100,9 +100,9 @@ public class TicketMachine {
     }
 
     public static void main(String[] args){
-        TicketMachine machine1 = new TicketMachine(40);
+        TicketMachine machine1 = new TicketMachine(4);
         System.out.println(machine1.getPrice());
-        System.out.println(machine1.insertMoney(100));
+        System.out.println(machine1.insertMoney(20));
         System.out.println(machine1.getBalance());
         System.out.println(machine1.printTicket());
         //0 is returned if we check the machine’s balance after it has printed a ticket
@@ -110,9 +110,9 @@ public class TicketMachine {
         System.out.println(machine1.getRefund());
 
 
-        //TicketMachine machine2 = new TicketMachine(68);
+        //TicketMachine machine2 = new TicketMachine(13);
         //System.out.println(machine2.getPrice());
-        //System.out.println(machine2.insertMoney(100));
+        //System.out.println(machine2.insertMoney(20));
         //System.out.println(machine2.getBalance());
         //System.out.println(machine2.printTicket());
         //0 is returned if we check the machine’s balance after it has printed a ticket
