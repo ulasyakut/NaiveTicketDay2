@@ -19,6 +19,9 @@ public class TicketMachine {
     // The number of tickets printed.
     private Integer ticketNumber;
 
+    private Integer refund;
+
+
     /**
      * Create a machine that issues tickets of the given price.
      * Note that the price must be greater than zero, and there
@@ -29,6 +32,7 @@ public class TicketMachine {
         balance = 0;
         total = 0;
         ticketNumber = 0;
+        refund = 0;
     }
 
     /**
@@ -87,4 +91,33 @@ public class TicketMachine {
 
         return "Ticket price: " + price + " cents. " + "Your total is " + total + ".";
     }
+
+    public Integer getRefund(){
+        refund = balance - price;
+        return refund;
+
+
+    }
+
+    public static void main(String[] args){
+        TicketMachine machine1 = new TicketMachine(40);
+        System.out.println(machine1.getPrice());
+        System.out.println(machine1.insertMoney(100));
+        System.out.println(machine1.getBalance());
+        System.out.println(machine1.printTicket());
+        //0 is returned if we check the machine’s balance after it has printed a ticket
+        System.out.println(machine1.getBalance());
+        System.out.println(machine1.getRefund());
+
+
+        //TicketMachine machine2 = new TicketMachine(68);
+        //System.out.println(machine2.getPrice());
+        //System.out.println(machine2.insertMoney(100));
+        //System.out.println(machine2.getBalance());
+        //System.out.println(machine2.printTicket());
+        //0 is returned if we check the machine’s balance after it has printed a ticket
+        //System.out.println(machine1.getBalance());
+
+    }
+
 }
